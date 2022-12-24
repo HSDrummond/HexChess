@@ -14,6 +14,8 @@ public class NotHexManager : MonoBehaviour
     {
         foreach (NotHex nothex in allNotHexes)
         {
+            if (nothex.type == null)
+                continue;
 
             Vector3 managerPos = transform.position;
             Vector3 notHexPos = nothex.transform.position;
@@ -25,7 +27,7 @@ public class NotHexManager : MonoBehaviour
                 notHexPos,
                 managerPos - offset,
                 notHexPos + offset,
-                Color.white,
+                nothex.type.color,
                 EditorGUIUtility.whiteTexture,
                 1f
             );
