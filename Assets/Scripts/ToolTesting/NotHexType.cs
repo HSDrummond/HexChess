@@ -5,7 +5,6 @@ using UnityEngine;
 [CreateAssetMenu]
 public class NotHexType : ScriptableObject
 {
-
     [Range(1f, 8f)]
     public float radius = 5;
     public float damage = 4;

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfbc4a943dfc45b47a46c643386fea88, type: 3}
   m_Name: RedNotHex
   m_EditorClassIdentifier: 
-  radius: 8
+  radius: 5.4
   damage: 10
-  color: {r: 0.9150943, g: 0.52384156, b: 0.51279813, a: 1}
+  color: {r: 1, g: 0.029411767, b: 0, a: 1}
