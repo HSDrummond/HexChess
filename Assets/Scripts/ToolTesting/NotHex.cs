@@ -33,7 +33,7 @@ public class NotHex : MonoBehaviour
         TryApplyColor();
     }
 
-    void TryApplyColor()
+    public void TryApplyColor()
     {
         if (type == null)
             return;

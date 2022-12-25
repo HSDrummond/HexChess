@@ -9,6 +9,16 @@ public class NotHexManager : MonoBehaviour
 {
     public static List<NotHex> allNotHexes = new List<NotHex>();
 
+
+    public static void UpdateAllNotHexColors()
+    {
+        foreach (NotHex nothex in allNotHexes)
+        {
+            nothex.TryApplyColor();
+        }
+    }
+
+
     #if UNITY_EDITOR
     private void OnDrawGizmos()
     {
