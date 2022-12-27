@@ -90,12 +90,12 @@ public class SnapperTool : EditorWindow
         foreach (NotHex go in NotHexManager.allNotHexes)
         {
             Vector3 snappedPos = go.transform.position.Round(gridValues);
-            Handles.DrawLine(snappedPos, snappedPos + (gridValues * Vector3.up));
-            Handles.DrawLine(snappedPos, snappedPos + (gridValues * Vector3.down));
-            Handles.DrawLine(snappedPos, snappedPos + (gridValues * Vector3.right));
-            Handles.DrawLine(snappedPos, snappedPos + (gridValues * Vector3.left));
-            Handles.DrawLine(snappedPos, snappedPos + (gridValues * Vector3.forward));
-            Handles.DrawLine(snappedPos, snappedPos + (gridValues * Vector3.back));
+            Handles.DrawLine(snappedPos, snappedPos + Vector3.up);
+            Handles.DrawLine(snappedPos, snappedPos + Vector3.down);
+            Handles.DrawLine(snappedPos, snappedPos + Vector3.right);
+            Handles.DrawLine(snappedPos, snappedPos + Vector3.left);
+            Handles.DrawLine(snappedPos, snappedPos + Vector3.forward);
+            Handles.DrawLine(snappedPos, snappedPos + Vector3.back);
         }
     }
 }
