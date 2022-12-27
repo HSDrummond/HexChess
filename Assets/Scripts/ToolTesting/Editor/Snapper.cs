@@ -28,13 +28,36 @@ public static class Snapper
 
     }
 
-    public static Vector3 Round( this Vector3 v )
+    public static Vector3 Round( this Vector3 v , int i = 1)
     {
-        v.x = Mathf.Round(v.x);
-        v.y = Mathf.Round(v.y);
-        v.z = Mathf.Round(v.z);
+        v.x = RoundByInt(v.x, i);
+        v.y = RoundByInt(v.y, i);
+        v.z = RoundByInt(v.z, i);
         return v;
     }
 
+    public static int RoundByInt(float a, int i)
+    {
+        i = Mathf.Abs(i);
+        int min = ((int)(a / i)) * i;
+        int max = min + i;
+
+        float minDiff = a - min;
+        float maxDiff = max - a;
+
+        if (minDiff == maxDiff)
+        {
+            if (minDiff % 2 == 0)
+            {
+                return min;
+            }
+            return max;
+        }
+        else if (minDiff < maxDiff)
+        {
+            return min;
+        }
+        return max;
+    }
 
 }
